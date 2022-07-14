@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header id="top"> 
+        <h1>
+    What should I watch generator?
+    <span id="home"><a href="movieorshow.html"> Home</a></span>
+    </h1>
+    </header>
+    <main>
+        <h2>Which Horror Movie should I watch?</h2>
+       <p>Press the button bollow</p>
+        <button onclick="blockImage()" id="horror">Find out!</button>
+        <p id="demo" ></p>
+         
+     
+</main>  
+<footer>
+    <h1>
+    ©2022 Copyright<br>
+     What should I watch
+     </h1>
+</footer>
+</body>
+<script >
+
+const setHr = () => {
+      const hrr=[];
+     hrr[0] = "https://m.media-amazon.com/images/M/MV5BMTJiMmE5YWItOWZjYS00YTg0LWE0MTYtMzg2ZTY4YjNkNDEzXkEyXkFqcGdeQXVyMTAzMDg4NzU0._V1_FMjpg_UX1000_.jpg "
+     hrr[1] = "https://m.media-amazon.com/images/M/MV5BZmIwNjJhOGYtNDcyNi00Yjc4LThiNTktMDM2ZjFhM2YxMTljXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg "
+     hrr[2] = "https://m.media-amazon.com/images/M/MV5BNDA4NzdiOTItZWUzOC00OWJkLWI4NjQtN2E5N2VjNzMyMTU3XkEyXkFqcGdeQXVyMTAwMjIyMTY4._V1_.jpg "
+     hrr[3] = "https://m.media-amazon.com/images/I/81vtKEpN8xL._SL1500_.jpg "
+     hrr[4] = "https://lumiere-a.akamaihd.net/v1/images/image_22a64aa3.jpeg "
+     hrr[5] = "https://m.media-amazon.com/images/M/MV5BYTQ3MzhlZjQtNWMxOS00NTEzLTgzOWYtNTI3MjhmZGU0ZDM2XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_QL75_UY281_CR6,0,190,281_.jpg "
+     hrr[6] = "https://m.media-amazon.com/images/M/MV5BYTc5ZjFhMDItYmViMi00YjI5LTgzNzctZjcxMDYzMWU2NTk2XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_QL75_UY281_CR5,0,190,281_.jpg "
+     hrr[7] = "https://upload.wikimedia.org/wikipedia/en/4/47/Midsommar_%282019_film_poster%29.png "
+     hrr[8] = "https://m.media-amazon.com/images/M/MV5BOTU5MDg3OGItZWQ1Ny00ZGVmLTg2YTUtMzBkYzQ1YWIwZjlhXkEyXkFqcGdeQXVyNTAzMTY4MDA@._V1_FMjpg_UX1000_.jpg "
+     hrr[9] = "https://upload.wikimedia.org/wikipedia/en/f/ff/The_Ritual_UK_poster.png "
+     hrr[10] = "https://m.media-amazon.com/images/M/MV5BOGQwN2UyM2YtNzNhOC00YjU5LWI0ZDgtZjMxZjM5ZmI0YjRmXkEyXkFqcGdeQXVyMTMxMTY0OTQ@._V1_.jpg "
+     hrr[11] = "https://upload.wikimedia.org/wikipedia/en/0/00/Us_%282019%29_theatrical_poster.png "
+     hrr[12] = "https://m.media-amazon.com/images/M/MV5BYTFkM2ViMmQtZmI5NS00MjQ2LWEyN2EtMTI1ZmNlZDU3MTZjXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg "
+     hrr[13] = "https://m.media-amazon.com/images/M/MV5BMTkwOTQ4OTg0OV5BMl5BanBnXkFtZTgwMzQyOTM0OTE@._V1_FMjpg_UX1000_.jpg "
+     hrr[14] = "https://m.media-amazon.com/images/M/MV5BMjA5NjE2NDI0OF5BMl5BanBnXkFtZTgwNzU0NzQyMTI@._V1_.jpg "
+     hrr[15] = " https://m.media-amazon.com/images/M/MV5BMjQ0Njc1OTczMl5BMl5BanBnXkFtZTgwMDM0MzY5NTM@._V1_.jpg"
+     hrr[16] = "https://m.media-amazon.com/images/M/MV5BMmU0MjBlYzYtZWY0MC00MjliLWI3ZmUtMzhlZDVjMWVmYWY4XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg "
+     hrr[17] = " https://m.media-amazon.com/images/M/MV5BMTEzOTY0MDI3MTdeQTJeQWpwZ15BbWU4MDk5NDAyNDYz._V1_.jpg"
+     hrr[18] = "https://m.media-amazon.com/images/M/MV5BNzQ1NDBlNDItMDAyYS00YTI2LTgwMmYtMzAwMzg4NDFlM2ZmXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg "
+     hrr[19] = "https://m.media-amazon.com/images/M/MV5BZjRmNjc5MTYtYjc3My00ZjNiLTg4YjUtMTQ0ZTFkZmMxMDUzXkEyXkFqcGdeQXVyNDY5MTUyNjU@._V1_.jpg "
+     hrr[20] = "https://i.pinimg.com/originals/f8/f7/11/f8f711de40453a1f80dcfbdca23c8183.jpg "
+     hrr[21] = "https://www.themoviedb.org/t/p/original/l3exwhwyGE0NnHJ3lFQ7eXoBSkH.jpg "
+     hrr[22] = "https://m.media-amazon.com/images/I/41dkpCu-rBL.jpg "
+     hrr[23] = "https://m.media-amazon.com/images/M/MV5BYzQ1YTU1NWEtMzAzYS00MGZhLWEwNjUtZGI1ZjE2MDc1Y2FkXkEyXkFqcGdeQXVyOTMzOTMzMTg@._V1_FMjpg_UX1000_.jpg "
+     hrr[24] = "https://m.media-amazon.com/images/M/MV5BMTc3MDU4NTQzMl5BMl5BanBnXkFtZTgwMDY2NjgwMzE@._V1_.jpg "
+     hrr[25] = "https://m.media-amazon.com/images/M/MV5BMjIxODg1Nzc3NF5BMl5BanBnXkFtZTcwMjM0MjEzMw@@._V1_FMjpg_UX1000_.jpg "
+     hrr[26] = "https://images-na.ssl-images-amazon.com/images/I/816NRdo6x2L._RI_.jpg "
+     hrr[27] = "https://www.heavenofhorror.com/wp-content/uploads/2020/11/the-call-2020-netflix-review-1.jpg "
+     hrr[28] = "https://m.media-amazon.com/images/I/41OCK7b+LEL._SY445_.jpg "
+     hrr[29] = "https://m.media-amazon.com/images/M/MV5BYTBjZjZkZGQtMzFkYy00NjYwLWEwYzktZjMzYWZiYzg4Y2FmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_QL75_UY281_CR6,0,190,281_.jpg "
+     hrr[30] = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKVgOKKgrbK3dQ6w-uJ8IW7MX9eTvKRlWKDKue9M9rwgIZ1s2e "
+      let numberr = Math.floor(Math.random() *hrr.length);
+      
+      
+      document.getElementById("demo").innerHTML= '<img src="'+ (hrr[numberr])+'"/>' ;
+      }
+      horror.addEventListener("click", setHr);
+        setHr();
+        //incorperated a lot of https://codepen.io/jsd041313/pen/RQEOWm and https://css-tricks.com/snippets/javascript/random-hex-color/
+//into my code. I also used w3schools to practice since I was getting stuck a lot with getting it to work with pictures
+       
+</script>    
+</body>
+</html>

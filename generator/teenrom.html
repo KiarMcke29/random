@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header id="top"> 
+        <h1>
+    What should I watch generator?
+    <span id="home"><a href="movieorshow.html"> Home</a></span>
+    </h1>
+    </header>
+    <main>
+        <h2>Which Teen show should I watch?</h2>
+       <p>Press the button bollow</p>
+        <button  id="buttonn">Find out!</button>
+        <p id="demo" ></p>
+         
+     
+</main>  
+<footer>
+    <h1>
+    ©2022 Copyright<br>
+     What should I watch
+     
+     </h1>
+</footer>
+<script>
+   const setTe = () => {
+  const teenrom=[];
+  teenrom[1]= "https://m.media-amazon.com/images/M/MV5BZjNjYzk0YjQtOWU2NS00ZjM2LWIwYmUtNmJlYTg2ZjM3ODFhXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg "
+  teenrom[2]= "https://m.media-amazon.com/images/M/MV5BM2NmNzBhYmUtZWMyNi00OWRmLThlNDgtMTlmMzMxMWIyZmJhXkEyXkFqcGdeQXVyODQyNDI4ODg@._V1_.jpg "
+  teenrom[3]= "https://m.media-amazon.com/images/M/MV5BYWIxNTdlYmQtZWQ3OC00NDkzLWJiNzYtODk3M2IxN2U5NTJmXkEyXkFqcGdeQXVyNjEwNTM2Mzc@._V1_FMjpg_UX1000_.jpg "
+  teenrom[4]= "https://m.media-amazon.com/images/M/MV5BMDk3YzgxNDQtNTEzOS00NDMyLWFlYmYtYTZlMDk1NDkxNmMyXkEyXkFqcGdeQXVyNzA5NjUyNjM@._V1_.jpg "
+  teenrom[5]= "https://m.media-amazon.com/images/M/MV5BMThlNTk3YzMtOTZjMi00M2NiLTg1NTgtYThiYzE2MDFmMDUwXkEyXkFqcGdeQXVyNzA5NjUyNjM@._V1_FMjpg_UX1000_.jpg "
+  teenrom[6]= "https://m.media-amazon.com/images/M/MV5BZTQ5ODM1YjEtYWEyZC00MmU2LWFlM2UtNDZiYjE0MWE5ZThiXkEyXkFqcGdeQXVyODI0ODg4MDY@._V1_.jpg "
+  teenrom[7]= "https://m.media-amazon.com/images/M/MV5BNDRmNjFmOWYtMjZmMy00ZjBlLWI0N2MtYTcyYTgzOGIxYzY0XkEyXkFqcGdeQXVyMTkzODUwNzk@._V1_.jpg "
+  teenrom[8]= "https://m.media-amazon.com/images/M/MV5BMjYwZWRkOGEtZjZkYS00Y2NiLTliOWEtZDAwZmI5ZTM5NjNhXkEyXkFqcGdeQXVyMTkxODQ4MDg@._V1_FMjpg_UX1000_.jpg "
+  teenrom[9]= "https://m.media-amazon.com/images/M/MV5BMDlhODg2ZTMtMDJmZi00YWYzLTllOGYtNjhlODA1NDliNTc0XkEyXkFqcGdeQXVyMjczOTU2NTI@._V1_.jpg "
+  teenrom[10]= "https://upload.wikimedia.org/wikipedia/en/thumb/e/e3/90210_-_Season_4_DVD.jpg/220px-90210_-_Season_4_DVD.jpg "
+  teenrom[11]= "https://images.theconversation.com/files/365991/original/file-20201028-19-i922a4.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop "
+  teenrom[12]= "https://m.media-amazon.com/images/M/MV5BMTkyMjAyNzAxNl5BMl5BanBnXkFtZTcwNjk1MDk5NA@@._V1_.jpg "
+  teenrom[13]= "https://m.media-amazon.com/images/M/MV5BMzE0YjIyMGEtNTVmMS00NWM5LWI1OTUtNjAxNDE0ZDFhMDQ3XkEyXkFqcGdeQXVyMTIyMjI4OTkx._V1_FMjpg_UX1000_.jpg "
+  teenrom[14]= "https://m.media-amazon.com/images/M/MV5BYTFlYWRhYjEtNDU3MC00ZTRiLTlmY2MtNGViODJlNDczNTA4XkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_.jpg "
+  teenrom[15]= "https://m.media-amazon.com/images/M/MV5BMzg2MGNmZDUtOWMyNi00NTczLTlhYjQtNjQxODgzNWEzMzljXkEyXkFqcGdeQXVyNDg4NjY5OTQ@._V1_.jpg "
+  teenrom[16]= "https://lanetechchampion.org/wp-content/uploads/2021/09/gilmore-girls-612x900.jpeg "
+  teenrom[17]= "https://upload.wikimedia.org/wikipedia/en/e/e9/On_My_Block_%28TV_series%29.png "
+  teenrom[18]= "https://m.media-amazon.com/images/M/MV5BODNkMWI2ZTAtYTIzNy00OTYwLTk2M2ItNGQ2NTgxYTU0YWIyXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg "
+  teenrom[19]= "https://upload.wikimedia.org/wikipedia/en/f/ff/One_Tree_Hill_-_Season_4_-_DVD.JPG "
+  teenrom[20]= "https://m.media-amazon.com/images/M/MV5BMWIzZTA0ZDYtOGZiNS00MDRiLWJkNzMtN2RiMzVmMjZjYTJiXkEyXkFqcGdeQXVyODIxOTMwMjk@._V1_FMjpg_UX1000_.jpg "
+  teenrom[21]= "https://m.media-amazon.com/images/M/MV5BNmY0NGMzYmQtNGE1NS00NWZmLWE4ZjMtN2VkZGVjNDlkN2M0XkEyXkFqcGdeQXVyMTI2Mjk5MjQy._V1_.jpg "
+  teenrom[22]= "https://m.media-amazon.com/images/M/MV5BMjA0NTkzMDU4OV5BMl5BanBnXkFtZTcwODMwNTkzNA@@._V1_.jpg "
+  teenrom[23]= "https://static.wikia.nocookie.net/thatssoraven/images/a/a2/That%27s_So_Raven%2C_Season_4.jpg/revision/latest/top-crop/width/360/height/450?cb=20120820034428 "
+  teenrom[24]= "https://m.media-amazon.com/images/M/MV5BNmZmOGM2ZGMtNzc1Yi00NWVjLTlhZjktZDQ2MzFkOWVlODk1XkEyXkFqcGdeQXVyMjczOTU2NTI@._V1_.jpg "
+  teenrom[25]= "https://m.media-amazon.com/images/M/MV5BNTk2MzEzMmUtMGNhMC00ZGYyLTg1ZDUtZmMxNjc3MDVmZjg0XkEyXkFqcGdeQXVyNjExODE1MDc@._V1_.jpg "
+  teenrom[26]= "https://m.media-amazon.com/images/M/MV5BOGUxOWQ4MzAtMmJjYS00M2U5LWEwZTAtYTc1YmZhNjg2NDRlXkEyXkFqcGdeQXVyMTYzMDM0NTU@._V1_.jpg "
+  teenrom[27]= "https://m.media-amazon.com/images/I/81Q1+yOwsjL._SL1500_.jpg "
+  teenrom[28]= "https://m.media-amazon.com/images/M/MV5BOTE0MjQ1NDU3OV5BMl5BanBnXkFtZTgwNTI4MTgwNzM@._V1_.jpg "
+  teenrom[29]= "https://m.media-amazon.com/images/M/MV5BNzRiNDcyZjItNzc1ZC00OTk3LWI3ZTItNDc0NTgxNjg3ZTZhL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMjM4NjgwODc@._V1_.jpg "
+  teenrom[30]= "https://m.media-amazon.com/images/M/MV5BNzMyMDM3MTY1M15BMl5BanBnXkFtZTgwMjQxNDIzMTE@._V1_.jpg "
+  teenrom[31]= "https://www.tvguide.com/a/img/catalog/provider/1/1/1-9508383263.jpg "
+  teenrom[32]= "https://m.media-amazon.com/images/M/MV5BMTQ2ZWFlNmEtNWYyYy00Yjk1LWIxMTEtMWVkM2NlMTEzOGI2XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX1000_.jpg "
+  teenrom[33]= "https://wpde.com/resources/media/31739bc0-7bdc-41bb-a9ca-f9eab51892de-large16x9_OuterBanksNetflix.jpg?1595695660424 "
+  teenrom[34]= "https://m.media-amazon.com/images/M/MV5BMjNjNThmYTUtMjY2Ni00OGE4LTgzOTItYTgzMDllNDM5NTI5XkEyXkFqcGdeQXVyNjEwNTM2Mzc@._V1_.jpg "
+  teenrom[35]= "https://flxt.tmsimg.com/assets/p14950191_b_h9_ab.jpg "
+  teenrom[36]= "https://m.media-amazon.com/images/M/MV5BMWJjNWQ4NzItYTk5OC00OTNhLWFiMzAtYTJlOWJkYmNhYzI4XkEyXkFqcGdeQXVyNjc3MjQzNTI@._V1_.jpg "
+
+
+  
+ 
+ 
+   //function getRandom ()
+  let number = Math.floor(Math.random() *teenrom.length);
+
+  //let fLen = fruits.length;
+  
+  //let text = "<ul>";
+  //for (let i = 0; i < fLen; i++) {
+  //  text += "<li>" + fruits[i] + "</li>";
+  
+  //text += "</ul>";
+  //return document.getElementById("demo").innerHTML =fruits[number]+'';
+  //}
+  //button.addEventListener("click") => document.getElementById("demo").innerHTML=(fruits[number])
+  document.getElementById("demo").innerHTML= '<img src="'+ (teenrom[number])+'"/>' ;
+  }
+  buttonn.addEventListener("click", setTe);
+  setTe();
+//incorperated a lot of https://codepen.io/jsd041313/pen/RQEOWm and https://css-tricks.com/snippets/javascript/random-hex-color/
+//into my code. I also used w3schools to practice since I was getting stuck a lot with getting it to work with pictures
+
+  
+ 
+</script>    
+</body>
+</html>

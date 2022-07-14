@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header id="top"> 
+        <h1>
+    What should I watch generator?
+    <span id="home"><a href="movieorshow.html"> Home</a></span>
+    </h1>
+    </header>
+    <main>
+        <h2>Which LGBTQIA+ show should I watch?</h2>
+       <p>Press the button bollow</p>
+        <button onclick="blockImage()" id="buttonn">Find out!</button>
+        <p id="demo" ></p>
+         
+     
+</main>  
+<footer>
+    <h1>
+    ©2022 Copyright<br>
+     What should I watch
+     
+     </h1>
+</footer>
+<script>
+   const setQe = () => {
+  const lg=[];
+  lg[1] = "https://m.media-amazon.com/images/M/MV5BNDgyODk4MTktODE3YS00YTUzLTlmYTgtOGJmZjMzZGM5NDBlXkEyXkFqcGdeQXVyOTA3MTMyOTk@._V1_FMjpg_UX1000_.jpg "
+  lg[2] = "https://m.media-amazon.com/images/M/MV5BNDYyY2EwY2ItNjJmNi00NWMyLWJkNzMtOWFjZmZmYjE2NzEyXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg "
+  lg[3] = "https://m.media-amazon.com/images/M/MV5BYzI3ZmI3ZDEtZGRhNC00ZjEzLWI2YzAtNWQxOTkxNzIxMzM0XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg "
+  lg[4] = "https://m.media-amazon.com/images/M/MV5BYjYyM2FmMmMtZDgyZi00NGU3LWI3NzktODllZDY0YzQyNzgyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg "
+  lg[5] = "https://m.media-amazon.com/images/M/MV5BMGY0NDExYjQtN2E5NS00NDc2LWE0ODMtOWFlYTcxMGQ2ZDM2XkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_.jpg "
+  lg[6] = "https://upload.wikimedia.org/wikipedia/en/f/fd/Poster_for_Netflix%27s_Special.png "
+  lg[7] = "https://m.media-amazon.com/images/M/MV5BNTc3MWM2MjMtYzM2ZC00MjhjLWE1NjYtYzMyMjM0ODUxMjQ4XkEyXkFqcGdeQXVyOTA3MTMyOTk@._V1_.jpg "
+  lg[8] = "https://flxt.tmsimg.com/assets/p15086357_b_v13_ao.jpg "
+  lg[9] = "https://upload.wikimedia.org/wikipedia/en/a/a0/Work_in_Progress_poster.png "
+  lg[10] = "https://flxt.tmsimg.com/assets/p15332919_b1t_v8_aa.jpg "
+  lg[11] = "https://m.media-amazon.com/images/M/MV5BZDllMzAzOGItYTY0NC00MWM1LThkODYtYzQ5ZTQ5YmJiOWMzXkEyXkFqcGdeQXVyMTAyMjQ3NzQ1._V1_.jpg "
+  lg[12] = "https://m.media-amazon.com/images/M/MV5BMmE5Y2RjYjYtOTYyOC00ZDAyLWE1YTItYTQ1ZDZjOWYyMWIwXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg "
+  lg[13] = "https://m.media-amazon.com/images/M/MV5BMWM5YzhmNGMtZTI4Ny00MGM4LThkYjAtMDIyMTEwNTQyZmQ1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg "
+  lg[14] = "https://flxt.tmsimg.com/assets/p18026437_b_v13_ab.jpg "
+  lg[15] = "https://flxt.tmsimg.com/assets/p10493839_b_v8_ae.jpg "
+  lg[16] = "https://flxt.tmsimg.com/assets/p20209081_b_v13_aa.jpg "
+  lg[17] = "https://static.wikia.nocookie.net/everythings-gonna-be-okay/images/d/d2/Season2poster.jpg/revision/latest?cb=20210413110858 "
+  lg[18] = "https://m.media-amazon.com/images/M/MV5BMjNjNThmYTUtMjY2Ni00OGE4LTgzOTItYTgzMDllNDM5NTI5XkEyXkFqcGdeQXVyNjEwNTM2Mzc@._V1_.jpg "
+  lg[19] = "https://resizing.flixster.com/UgAPdefihsjWkFM1TYex_44ASWo=/ems.ZW1zLXByZC1hc3NldHMvdHZzZXJpZXMvUlRUVjQ0NTk0MC53ZWJw "
+  lg[20] = "https://resizing.flixster.com/Kt3cGNJBKd4JvySYSr2FdFzmcBg=/300x300/v2/https://flxt.tmsimg.com/assets/p18615832_b_v13_aa.jpg "
+  lg[21] = "https://m.media-amazon.com/images/M/MV5BOGQ0MDQyYWMtNjdlYy00ZDAyLWE5YTItMzcyMjllZTA4MTcyXkEyXkFqcGdeQXVyMjEzNTg5Mzk@._V1_.jpg "
+  lg[22] = "https://m.media-amazon.com/images/M/MV5BNGIzOGQxZDEtOTVhNC00YzgyLWE2ZjItNDM5YjQ0MTZlZTUwXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg "
+  lg[23] = "https://m.media-amazon.com/images/M/MV5BNWQ1YWI0YjgtNWNmYy00NTY0LWJjZjgtMGFmMDU1OGM5Y2FiXkEyXkFqcGdeQXVyMTA3MzQ4MTg0._V1_FMjpg_UX1000_.jpg "
+  lg[24] = "https://upload.wikimedia.org/wikipedia/en/3/37/Adventure_Time_-_Title_card.png "
+  lg[25] = "https://m.media-amazon.com/images/M/MV5BY2MwOGIyZGYtNzgxZC00N2Q5LTllYjItM2U4MTkwMDBjYzUyXkEyXkFqcGdeQXVyNzA5NjUyNjM@._V1_.jpg "
+  lg[26] = "https://m.media-amazon.com/images/M/MV5BMDMzZDkyNzEtYTY5Ni00NzlhLWI4MzUtY2UzNjNmMjI1YzIzXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_FMjpg_UX1000_.jpg "
+  lg[27] = "https://m.media-amazon.com/images/M/MV5BOTE0MjQ1NDU3OV5BMl5BanBnXkFtZTgwNTI4MTgwNzM@._V1_.jpg "
+  lg[28] = "https://m.media-amazon.com/images/M/MV5BOTg3YjU0NGUtMTFhYi00OWMwLThmOGYtYTg5MDJhMTdmMWIwXkEyXkFqcGdeQXVyNjEwNTM2Mzc@._V1_.jpg "
+  lg[29] = "https://m.media-amazon.com/images/M/MV5BYWI4YzEzZDEtYzZiZS00YmU0LWJkZmItNTBjYzAxODhjNmZjXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg "
+  lg[30] = "https://m.media-amazon.com/images/M/MV5BMTUxNDJhYjAtNDMyNi00NThhLWEwM2UtZDk4NzhmMjZjMjYwXkEyXkFqcGdeQXVyMTE3MTMwODEy._V1_.jpg "
+  lg[31] = "https://images-na.ssl-images-amazon.com/images/I/A1+m2DJ5FVL._RI_.jpg "
+  lg[32] = "https://i.ytimg.com/vi/NJHVEwILuDI/maxresdefault.jpg"
+  lg[33] = "https://upload.wikimedia.org/wikipedia/en/d/dd/NoahsArc-2ndseason.png "
+  lg[34] = "https://img.hulu.com/user/v3/artwork/4610a3b7-cbb8-49f5-b2d2-d77e22136fbf?base_image_bucket_name=image_manager&base_image=00d24552-be69-4b83-8f87-5721defc2d32&region=US&format=jpeg&size=952x536"
+  lg[35] = "https://m.media-amazon.com/images/M/MV5BYjQ0MjNiYjItMWFkNC00MTI5LTlhYTEtZWY3OGJhN2VhZjBmXkEyXkFqcGdeQXVyNzA5NjUyNjM@._V1_.jpg"
+  lg[36] = "https://m.media-amazon.com/images/M/MV5BMDkwZDY3ODgtMThhNC00N2UzLTgzOGYtMTg5ZmNkOTZhMDJhXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX1000_.jpg"
+  lg[37] = "https://m.media-amazon.com/images/M/MV5BY2ZiMDZhNTUtMWMwNy00ODVmLTliYWItN2U0NDE4OGNmNTgyXkEyXkFqcGdeQXVyNjc3MjQzNTI@._V1_.jpg"
+  lg[38] = "https://m.media-amazon.com/images/M/MV5BMTc0YTU5MWQtZGRhYy00MWI1LTlkNTEtYzRkMjE4NzU2ZTlkXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX1000_.jpg"
+  lg[39] = "https://upload.wikimedia.org/wikipedia/en/3/3d/ShesGottaHaveIt_poster.png"
+  
+ 
+ 
+ 
+   //function getRandom ()
+  let number = Math.floor(Math.random() *lg.length);
+
+  //let fLen = fruits.length;
+  
+  //let text = "<ul>";
+  //for (let i = 0; i < fLen; i++) {
+  //  text += "<li>" + fruits[i] + "</li>";
+  
+  //text += "</ul>";
+  //return document.getElementById("demo").innerHTML =fruits[number]+'';
+  //}
+  //button.addEventListener("click") => document.getElementById("demo").innerHTML=(fruits[number])
+  document.getElementById("demo").innerHTML= '<img src="'+ (lg[number])+'"/>' ;
+  }
+  buttonn.addEventListener("click", setQe);
+  setQe();
+//incorperated a lot of https://codepen.io/jsd041313/pen/RQEOWm and https://css-tricks.com/snippets/javascript/random-hex-color/
+//into my code. I also used w3schools to practice since I was getting stuck a lot with getting it to work with pictures
+
+  
+ 
+</script>    
+</body>
+</html>

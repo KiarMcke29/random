@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <header id="top"> 
+    <h1>
+What should I watch generator?
+<span id="home"><a href="movieorshow.html"> Home</a></span>
+</h1>
+</header>
+<main>
+    <h2>Which Comedey Movie should I watch?</h2>
+   <p>Press the button bellow</p>
+    <button onclick="blockImage()" id="comedy">Find out!</button>
+    <p id="demo" ></p>
+     
+ 
+</main>  
+<footer>
+  <h1>
+  ©2022 Copyright<br>
+   What should I watch
+   </h1>
+</footer>
+</body>
+<script >
+
+const setCo = () => {
+      const come=[];
+      come[0] = "https://upload.wikimedia.org/wikipedia/en/d/dc/Jumanji_Welcome_to_the_Jungle.png "
+      come[1] = "https://m.media-amazon.com/images/M/MV5BMjZjNzRjNmQtOGJlMS00NzVkLWFmYWQtYjIxMzJmYTkwMjhhXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg "
+      come[2] = "https://m.media-amazon.com/images/M/MV5BMjE0ODIzNjkzMl5BMl5BanBnXkFtZTgwODQ3MzU4NDM@._V1_.jpg "
+      come[3] = "https://m.media-amazon.com/images/I/710cn5qOtuL._SL1500_.jpg "
+      come[4] = "https://m.media-amazon.com/images/M/MV5BNWY1NDI0ZTQtMjJiNS00ODY4LWE1NmUtYTkwNzY3NWQ0ZDZjXkEyXkFqcGdeQXVyMTM0NTc2NDgw._V1_FMjpg_UX1000_.jpg "
+      come[5] = "https://m.media-amazon.com/images/M/MV5BMTg3ODY5ODI1NF5BMl5BanBnXkFtZTgwMTkxNTYxMTE@._V1_FMjpg_UX1000_.jpg "
+      come[6] = "https://upload.wikimedia.org/wikipedia/en/f/f7/Sausage_Party_logo.png "
+      come[7] = "https://upload.wikimedia.org/wikipedia/en/c/cf/Delivery_Man_Poster.jpg "
+      come[8] = "https://m.media-amazon.com/images/M/MV5BMTcyMTMzNzE5N15BMl5BanBnXkFtZTcwNzg5NjM5Nw@@._V1_FMjpg_UX1000_.jpg "
+      come[9] = "https://upload.wikimedia.org/wikipedia/en/a/ac/Mean_Girls_film_poster.png "
+      come[10] = "https://m.media-amazon.com/images/M/MV5BNzI4MDMwMzUwNF5BMl5BanBnXkFtZTgwMDgyNzkyNzE@._V1_.jpg "
+      come[11] = "https://m.media-amazon.com/images/M/MV5BMjI3MDY2ODQwNF5BMl5BanBnXkFtZTgwNjUzNjE4MTE@._V1_FMjpg_UX1000_.jpg "
+      come[12] = "https://m.media-amazon.com/images/M/MV5BNjU4NzYzOTY1MF5BMl5BanBnXkFtZTgwMTAyNTc1MDE@._V1_.jpg "
+      come[13] = "https://upload.wikimedia.org/wikipedia/en/3/32/Neighbors_%282013%29_Poster.jpg "
+      come[14] = "https://play-lh.googleusercontent.com/pNwhAlpfIrb2fFhnCF9O8IwXS79U0-y_GfBDJHN4hQuJ-qcg3DB6wyJCM3KmqVWXI4L4 "
+      come[15] = "https://m.media-amazon.com/images/M/MV5BMTM2NzA1MzE1NF5BMl5BanBnXkFtZTcwOTYyNDIzMg@@._V1_FMjpg_UX1000_.jpg "
+      come[16] = "https://m.media-amazon.com/images/M/MV5BOTgzZDQzNTQtY2NmMC00YTM1LWEwYmEtZGIwNmJmOTdiOTZlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg "
+      come[17] = "https://lumiere-a.akamaihd.net/v1/images/image_9c09b0f0.jpeg?region=0%2C0%2C800%2C1200 "
+      come[18] = "https://flxt.tmsimg.com/assets/p34617_p_v8_ak.jpg "
+
+      let numberr = Math.floor(Math.random() *come.length);
+      
+      
+      document.getElementById("demo").innerHTML= '<img src="'+ (come[numberr])+'"/>' ;
+      }
+      comedy.addEventListener("click", setCo);
+        setCo();
+//incorperated a lot of https://codepen.io/jsd041313/pen/RQEOWm and https://css-tricks.com/snippets/javascript/random-hex-color/
+//into my code. I also used w3schools to practice since I was getting stuck a lot with getting it to work with pictures
+       
+</script>    
+</body>
+</html>

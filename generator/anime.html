@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header id="top"> 
+        <h1>
+    What should I watch generator?
+    <span id="home"><a href="movieorshow.html"> Home</a></span>
+    </h1>
+    </header>
+    <main>
+        <h2>Which Anime Movie should I watch?</h2>
+       <p>Press the button bollow</p>
+        <button onclick="blockImage()" id="anime">Find out!</button>
+        <p id="demo" ></p>
+         
+     
+</main>  
+<footer>
+    <h1>
+    ©2022 Copyright<br>
+     What should I watch
+     </h1>
+</footer>
+</body>
+<script >
+
+const setAn = () => {
+      const animee=[];
+     animee[0] = "https://m.media-amazon.com/images/M/MV5BNGYyNmI3M2YtNzYzZS00OTViLTkxYjAtZDIyZmE1Y2U1ZmQ2XkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_.jpg "
+     animee[1] = "https://upload.wikimedia.org/wikipedia/en/8/85/Classmates-Doukyusei.jpg "
+     animee[2] = "https://m.media-amazon.com/images/M/MV5BZGRkOGMxYTUtZTBhYS00NzI3LWEzMDQtOWRhMmNjNjJjMzM4XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg "
+     animee[3] = "https://m.media-amazon.com/images/M/MV5BNmM4YTFmMmItMGE3Yy00MmRkLTlmZGEtMzZlOTQzYjk3MzA2XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg "
+     animee[4] = "https://upload.wikimedia.org/wikipedia/en/c/c4/The_Boy_and_the_Beast_poster.jpg "
+     animee[5] = "https://m.media-amazon.com/images/M/MV5BMTkyNmU2ZjUtNzIwMy00MWRlLWE4ZWQtYzJhYjU0MmUxZjhiXkEyXkFqcGdeQXVyNDgyODgxNjE@._V1_.jpg "
+     animee[6] = "http://oyster.ignimgs.com/wordpress/stg.ign.com/2017/03/gits1.jpg "
+     animee[7] = "https://m.media-amazon.com/images/M/MV5BM2ZiZTk1ODgtMTZkNS00NTYxLWIxZTUtNWExZGYwZTRjODViXkEyXkFqcGdeQXVyMTE2MzA3MDM@._V1_.jpg "
+     animee[8] = "https://m.media-amazon.com/images/M/MV5BNDI4MGEwZDAtZDg0Yy00MjFhLTg1MjctODdmZTMyNTUyNDI3L2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg "
+     animee[9] = "https://m.media-amazon.com/images/M/MV5BMmMzOWNhNTYtYmY0My00OGJiLWIzNDUtZWRhNGY0NWFjNzFmXkEyXkFqcGdeQXVyNjUxMDQ0MTg@._V1_FMjpg_UX1000_.jpg "
+     animee[10] = "https://m.media-amazon.com/images/M/MV5BNmY4NDEyYmQtODQ3MC00NjA1LTkwM2YtYjUyNTYxYTdlNDE4XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg "
+     animee[11] = "https://m.media-amazon.com/images/I/61CDK8QP4SL._SY445_.jpg "
+     animee[12] = "https://m.media-amazon.com/images/I/91Xv1GQe3qL._SY679_.jpg "
+     animee[13] = "https://static.wikia.nocookie.net/voiceacting/images/c/cf/Berserk_The_Golden_Age_Arc_I_The_Egg_of_the_King_2012_DVD_Cover.jpg/revision/latest?cb=20140113144841 "
+     animee[14] = "https://static.wikia.nocookie.net/netflix/images/9/97/Flavors_of_Youth.jpg/revision/latest/top-crop/width/360/height/450?cb=20200611162202 "
+     animee[14] = "https://static.wikia.nocookie.net/dubbing9585/images/b/bb/The_girl_who_leapt_through_time.jpg/revision/latest?cb=20181112070239 "
+     animee[15] = "https://m.media-amazon.com/images/M/MV5BNDM4MWE3NGQtODlkYS00NWU5LTg3ZjMtMTEyNjljOWI4NWIxXkEyXkFqcGdeQXVyNzkzODk2Mzc@._V1_.jpg "
+     animee[16] = "https://static.wikia.nocookie.net/enanimanga/images/2/23/Children_Who_Chase_Lost_Voices.jpg/revision/latest?cb=20140712185635 "
+     animee[17] = "https://i.scdn.co/image/ab67616d0000b2733230082f003a2d271dbbd85e "
+     animee[18] = "https://m.media-amazon.com/images/M/MV5BMTYyOTk3OTQzM15BMl5BanBnXkFtZTcwMjU4NDYyNA@@._V1_.jpg "
+     animee[19] = "https://m.media-amazon.com/images/M/MV5BNTgxNDI1NzgyNl5BMl5BanBnXkFtZTgwMTgzNTIzMjI@._V1_FMjpg_UX1000_.jpg "
+     animee[20] = "https://m.media-amazon.com/images/M/MV5BMDAxYzU2YjEtNmNjNS00OGJlLTg3MzgtNzAwN2E1ZWFiYTg5XkEyXkFqcGdeQXVyNTkwNzYyODM@._V1_.jpg "
+     animee[21] = "https://m.media-amazon.com/images/M/MV5BNDM3Y2YzZWUtMGQ2Yy00NDQ0LThmMjEtMWE3Mjc4YzcwODZhXkEyXkFqcGdeQXVyNjc3MjQzNTI@._V1_.jpg "
+     animee[22] = "https://m.media-amazon.com/images/M/MV5BZGU0Mjc1ZTctZDdmYi00YzU0LWI4MjctMDM3Y2VjMzkzYmNiXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_.jpg "
+     animee[23] = "https://m.media-amazon.com/images/M/MV5BYzJjMTYyMjQtZDI0My00ZjE2LTkyNGYtOTllNGQxNDMyZjE0XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg "
+     animee[24] = "https://m.media-amazon.com/images/M/MV5BNDA1ODI3MTcyNl5BMl5BanBnXkFtZTcwNDkyODYwNw@@._V1_.jpg "
+     animee[25] = "https://flxt.tmsimg.com/assets/p19649599_p_v13_ab.jpg "
+     animee[26] = "https://m.media-amazon.com/images/M/MV5BOTEyODU4MDktOTQ3Zi00MjA1LWJkMjEtNDczZWYxZWFlZGY3XkEyXkFqcGdeQXVyNzc5MjA3OA@@._V1_.jpg "
+     animee[27] = "https://upload.wikimedia.org/wikipedia/en/9/9a/Memories_1995_poster.png "
+     animee[28] = "https://m.media-amazon.com/images/M/MV5BZWVlMGY3OTUtZTljNS00MDAxLWE2YzYtMjc0ZjhlNzUwMDBhXkEyXkFqcGdeQXVyMzM4MjM0Nzg@._V1_.jpg "
+     animee[29] = "https://upload.wikimedia.org/wikipedia/en/8/8a/Geius_Party_DVD_cover.jpg "
+     animee[30] = "https://upload.wikimedia.org/wikipedia/en/2/26/Mindgame-2004-poster.jpg "
+     animee[31] = "https://cdn.myanimelist.net/images/anime/1056/112684.jpg "
+     animee[32] = "https://images-na.ssl-images-amazon.com/images/I/81YURBhelGL._RI_.jpg "
+     animee[33] = "https://m.media-amazon.com/images/M/MV5BYWRkOGM0N2UtMTIyZi00MjA4LTg0NjQtN2RkYTQwMGJlNzFiXkEyXkFqcGdeQXVyNDYzNTI2ODc@._V1_.jpg "
+     animee[34] = "https://upload.wikimedia.org/wikipedia/en/5/5f/Patema_Inverted_DVD.jpg "
+      let numberr = Math.floor(Math.random() *animee.length);
+      
+      
+      document.getElementById("demo").innerHTML= '<img src="'+ (animee[numberr])+'"/>' ;
+      }
+      anime.addEventListener("click", setAn);
+        setAn();
+        //incorperated a lot of https://codepen.io/jsd041313/pen/RQEOWm and https://css-tricks.com/snippets/javascript/random-hex-color/
+//into my code. I also used w3schools to practice since I was getting stuck a lot with getting it to work with pictures
+        //function blockImage()  {
+     // let targetDiv = document.getElementById("demo")
+      //if (targetDiv.style.display !== "none") {
+     //   targetDiv.style.display = "none";
+     // } else {
+     //   targetDiv.style.display = "block";
+     // }
+   // }
+</script>    
+</body>
+</html>

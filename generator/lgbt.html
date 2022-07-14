@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <header id="top"> 
+    <h1>
+What should I watch generator?
+<span id="home"><a href="movieorshow.html"> Home</a></span>
+</h1>
+</header>
+    <main>
+        <h2>Which LGBTQIA+ Movie should I watch?</h2>
+       <p>Press the button bollow</p>
+        <button onclick="blockImage()" id="lgbtqi">Find out!</button>
+        <p id="demoo" ></p>
+         
+     
+</main>  
+<footer>
+  <h1>
+  ©2022 Copyright<br>
+   What should I watch
+   </h1>
+</footer>
+</body>
+<script >
+
+const setLg = () => {
+      const lgbt=[];
+      lgbt[0]= "https://images-na.ssl-images-amazon.com/images/I/81yuwzzafbL.jpg"
+    lgbt[1]= "https://m.media-amazon.com/images/M/MV5BMTc5YjA3YWItZDExOS00YjJmLWI0NTMtZmE2YTUxNThkNzg5XkEyXkFqcGdeQXVyMTEyOTQ1OTk4._V1_.jpg "
+    lgbt[2]= "https://m.media-amazon.com/images/M/MV5BNGM2ZTFlMjQtMTcwMi00NDFkLThlZjEtZTUwOGE5MjI0OTVjXkEyXkFqcGdeQXVyMTAyNjg4NjE0._V1_.jpg "
+     lgbt[3]= "https://m.media-amazon.com/images/I/51ZiZnecONL.jpg "
+      lgbt[4]=  "https://m.media-amazon.com/images/M/MV5BNjgwNjkwOWYtYmM3My00NzI1LTk5OGItYWY0OTMyZTY4OTg2XkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg "
+     lgbt[5] =  "https://m.media-amazon.com/images/M/MV5BNmZjNGVmYmItZWFmNi00ODQ1LThmZTUtMzYzMGJlMjZjMGFiXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg "
+      lgbt[6] = "https://m.media-amazon.com/images/M/MV5BNjcwN2RhYWYtOWY1NC00M2JkLTllYWItYzZhOTg4NjZmMDcwXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg "
+    lgbt[7] = "https://m.media-amazon.com/images/M/MV5BMTM1MTQyNTY3NV5BMl5BanBnXkFtZTcwODk0ODk2Ng@@._V1_.jpg "
+     lgbt[8] = "https://m.media-amazon.com/images/M/MV5BMGFiZTNiZjEtN2E4ZS00MWQyLWJmZDYtMTRmZTAwM2ExNDZlXkEyXkFqcGdeQXVyNTkyMjQwNw@@._V1_.jpg "
+      lgbt[9] = "https://m.media-amazon.com/images/I/91qor8TIUqL._SL1500_.jpg "
+      lgbt[10] = "https://i.ytimg.com/vi/HEVonh8bjC0/maxresdefault.jpg "
+      lgbt[11] = "https://img4.hulu.com/user/v3/artwork/fc634fff-8a98-4138-9c4e-6486a6f33573?base_image_bucket_name=image_manager&base_image=92328b8d-508b-4c8c-8052-a725d7c7ccc5&size=1200x630&format=jpeg&operations=%5B%7B%22gradient_vector%22%3A%22(0%2C0%2C0%2C0.5)%7C(0%2C0%2C0%2C0)%7C(0%2C600)%7C(0%2C240)%22%7D%2C%7B%22overlay%22%3A%7B%22position%22%3A%22SouthEast%7C(30%2C30)%22%2C%22operations%22%3A%5B%7B%22image%22%3A%22image_manager%7C986c47bd-477f-4fb2-9141-554210f0662a%22%7D%2C%7B%22resize%22%3A%22204x204%7Cmax%22%7D%2C%7B%22extent%22%3A%22204x204%22%7D%5D%7D%7D%2C%5D "
+     lgbt[12] = "https://m.media-amazon.com/images/M/MV5BOThkZDUwZjYtMjY0Ni00OGQyLTgwOWYtNmU2ZDQ1MGU3NDM2XkEyXkFqcGdeQXVyMDk0ODI3OA@@._V1_.jpg "
+     lgbt[13] = "https://m.media-amazon.com/images/M/MV5BMTY5NTAzNTc1NF5BMl5BanBnXkFtZTYwNDY4MDc3._V1_FMjpg_UX1000_.jpg "
+      lgbt[14] = "https://m.media-amazon.com/images/M/MV5BNjg3MjU0NjQ0MF5BMl5BanBnXkFtZTcwOTEwNjc1OA@@._V1_.jpg "
+      lgbt[15] = "https://m.media-amazon.com/images/M/MV5BZTU1OTViNGEtYmViMS00YjllLWI4OTEtNGNkMWJhY2U4YjAxXkEyXkFqcGdeQXVyMjUzMTYzMDI@._V1_.jpg "
+     lgbt[16] = "https://m.media-amazon.com/images/M/MV5BMTAyNTUyNDM3NzZeQTJeQWpwZ15BbWU4MDkzMDAyNDYx._V1_.jpg "
+      lgbt[17] = "https://m.media-amazon.com/images/M/MV5BMTY5MDgzMDUyMV5BMl5BanBnXkFtZTgwODA4Nzg2ODE@._V1_.jpg "
+     lgbt[18] = "https://m.media-amazon.com/images/M/MV5BMTQ5NjYxODk2NF5BMl5BanBnXkFtZTgwOTgyNTU4MjE@._V1_.jpg "
+     lgbt[20] = "https://m.media-amazon.com/images/M/MV5BYTEwYTAxMjItMmE2ZC00ZTg4LTkyZGYtZWEzYjcwNzBkZDViXkEyXkFqcGdeQXVyMTY2MzUxMjk@._V1_FMjpg_UX1000_.jpg "
+     lgbt[21] = "https://s3.amazonaws.com/criterion-production/films/17e786df2bac8c4b60ca2a48a561a34c/Ox1KmDZXN78FH8kqHvZuNfOXAzMC3K_large.jpg "
+     lgbt[22] = "https://upload.wikimedia.org/wikipedia/en/9/91/GBF_film_poster.png "
+     lgbt[23] = "https://m.media-amazon.com/images/M/MV5BMjQ4MjIxOTYyNF5BMl5BanBnXkFtZTgwMTc3MDg0NTM@._V1_.jpg "
+     lgbt[24] = "https://m.media-amazon.com/images/M/MV5BZmZiM2RmMWUtNjcyZi00ZDcxLWE3ZjktY2VlYTk3Y2I0NTZjXkEyXkFqcGdeQXVyMjU3NTI0Mg@@._V1_.jpg "
+     lgbt[25] = "https://m.media-amazon.com/images/M/MV5BYzY5YTc4MjEtMmM5MS00ZDkxLTk2MDItYjM0YjRjNmNlMGE0XkEyXkFqcGdeQXVyMTg3NzQ1NDk@._V1_.jpg "
+     lgbt[26] = "https://upload.wikimedia.org/wikipedia/en/6/67/Disclosure_Trans_Lives_on_Screen_poster.jpg "
+     lgbt[27] = "https://upload.wikimedia.org/wikipedia/en/0/08/Handsome_Devil_poster.jpg "
+     lgbt[28] = "https://upload.wikimedia.org/wikipedia/en/a/a7/Loev_poster.jpg "
+     lgbt[29] = "https://upload.wikimedia.org/wikipedia/en/6/62/HedwigandtheAngryInchMoviePoster.jpg "
+     lgbt[30] = "https://m.media-amazon.com/images/M/MV5BMTYxOTQ0YzctN2NjNi00MTZjLWI4MTMtMDFmMzExMzAwNzljXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg "
+      let numberr = Math.floor(Math.random() *lgbt.length);
+      
+      
+      document.getElementById("demoo").innerHTML= '<img src="'+ (lgbt[numberr])+'"/>' ;
+      }
+      lgbtqi.addEventListener("click", setLg);
+        setLg();
+        //incorperated a lot of https://codepen.io/jsd041313/pen/RQEOWm and https://css-tricks.com/snippets/javascript/random-hex-color/
+//into my code. I also used w3schools to practice since I was getting stuck a lot with getting it to work with pictures
+      
+</script>    
+</body>
+</html>

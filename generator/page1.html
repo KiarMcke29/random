@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header id="top"> 
+        <h1>
+    What should I watch generator?
+    <span id="home"><a href="movieorshow.html"> Home</a></span>
+    </h1>
+    </header>
+    <main>
+        <h2>Which Teen Romance should I watch?</h2>
+       <p>Press the button bollow</p>
+        <button onclick="blockImage()" id="buttonn">Find out!</button>
+        <p id="demo" ></p>
+         
+     
+</main>  
+<footer>
+    <h1>
+    ©2022 Copyright<br>
+     What should I watch
+     
+     </h1>
+</footer>
+<script>
+   const setNg = () => {
+  const teenrom=[];
+  teenrom[0]= "https://upload.wikimedia.org/wikipedia/en/thumb/9/95/10_Things_I_Hate_About_You_film.jpg/220px-10_Things_I_Hate_About_You_film.jpg"
+ teenrom[1]= "https://m.media-amazon.com/images/M/MV5BMTA1NDI0OTkwNDNeQTJeQWpwZ15BbWU3MDQ3Nzc1MjE@._V1_.jpg"
+ teenrom[2]= "https://m.media-amazon.com/images/M/MV5BNTE0NDk1YzAtNTUwZC00NmViLWI3YjgtY2ZjYWI2YjYzZjkyXkEyXkFqcGdeQXVyMTkzODUwNzk@._V1_FMjpg_UX1000_.jpg"
+  teenrom[3]= "https://m.media-amazon.com/images/M/MV5BZjlmMzM5NjEtYzU0Ny00MDgwLWI2NmUtNWJiOTRhYmVkYzIzXkEyXkFqcGdeQXVyNTA3MTU2MjE@._V1_.jpg"
+  teenrom[4]=  "https://m.media-amazon.com/images/M/MV5BMTc3OTg3MDUwN15BMl5BanBnXkFtZTgwMTAwMTkxNDE@._V1_.jpg"
+  teenrom[5] =  "https://m.media-amazon.com/images/M/MV5BMjQ3NjM5MTAzN15BMl5BanBnXkFtZTgwODQzMDAwNjM@._V1_.jpg"
+  teenrom[6] = "https://m.media-amazon.com/images/M/MV5BY2Y0N2YyOTQtMGNiYy00ZDViLTgxYmItODkxNzlkMWVjNTFkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg "
+  teenrom[7] = " https://m.media-amazon.com/images/I/71BcV+dyGFL._SL1257_.jpg"
+  teenrom[8] = "https://upload.wikimedia.org/wikipedia/en/6/6a/I_Love_You%2C_Beth_Cooper_%28film%29.png"
+  teenrom[9] = "https://m.media-amazon.com/images/M/MV5BNjZmNTUzN2QtYzUxZi00M2YwLTgzNTgtZDkzYjg0YWVmNmYzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg "
+  teenrom[10] = "https://m.media-amazon.com/images/M/MV5BNjQ0Mzk0OTE5MF5BMl5BanBnXkFtZTgwNDkyOTI0NTM@._V1_.jpg "
+  teenrom[11] = "https://m.media-amazon.com/images/M/MV5BYmM0NzRiODEtMTIzNS00MTgwLWFjZDQtNjUxZjI0MDdjZWQ4XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg "
+  teenrom[12] = "https://storage.googleapis.com/geek-news-network/2013/07/todolist1.jpg "
+  teenrom[13] = "https://upload.wikimedia.org/wikipedia/en/4/45/AngusThongsmovieposter.jpg "
+  teenrom[14] = "https://m.media-amazon.com/images/M/MV5BMDI3YmEwOTItNDEyNC00MGNlLWJiMjEtMzc0MTJjZmM1NGEzXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg "
+  teenrom[15] = "https://m.media-amazon.com/images/M/MV5BMTg3NTQ5Mjc1N15BMl5BanBnXkFtZTgwNzg0MjU4NzM@._V1_.jpg "
+ teenrom[16] = "https://m.media-amazon.com/images/M/MV5BYzhhMmQxMjEtMWQwYy00MDBiLWIwMjMtNDM3ZDY0ZjlmYmVkXkEyXkFqcGdeQXVyMTkzNjkwOQ@@._V1_FMjpg_UX1000_.jpg "
+  teenrom[17] = "https://m.media-amazon.com/images/M/MV5BMjE1MzU1Mjg1OF5BMl5BanBnXkFtZTcwNDc3NDQ2Mw@@._V1_FMjpg_UX1000_.jpg "
+  teenrom[18] = "https://i.ytimg.com/vi/pLhYFWwACo4/maxresdefault.jpg "
+  teenrom[19] = "https://m.media-amazon.com/images/M/MV5BYzM3NmYyMTItZWY5My00MTQzLWFmMzEtOTc2ZjRkMDJkYWM3XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg "
+  teenrom[20] = "https://m.media-amazon.com/images/M/MV5BMjUwM2JiOWMtNDUyZi00Yjg1LThkMzQtYTM1NWE2YzIwOTNmXkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_FMjpg_UX1000_.jpg "
+  teenrom[21] = "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781534451568/five-feet-apart-9781534451568_hr.jpg "
+  teenrom[22] = "https://m.media-amazon.com/images/M/MV5BZmU1YmM2MTQtMDI2Zi00ZDNkLWExYWItMGU4NjA3NjA2MWU4XkEyXkFqcGdeQXVyNjU4MjE5Njk@._V1_.jpg "
+  teenrom[23] = "https://upload.wikimedia.org/wikipedia/en/5/5c/Hairspray2007poster.JPG "
+  teenrom[24] = "https://m.media-amazon.com/images/M/MV5BMzBmOGQ0NWItOTZjZC00ZDAxLTgyOTEtODJiYWQ2YWNiYWVjXkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_FMjpg_UX1000_.jpg "
+  teenrom[25] = "https://m.media-amazon.com/images/M/MV5BMmNkYWMwZjQtNDQyZC00OTgxLTk0ZWEtNmMwNzQ1MmQ2ODYyXkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_FMjpg_UX1000_.jpg "
+  teenrom[26] = "https://upload.wikimedia.org/wikipedia/en/0/00/The_Map_of_Tiny_Perfect_Things_poster.png "
+  teenrom[27] = "https://upload.wikimedia.org/wikipedia/en/f/fb/Spontaneous_%28film%29.jpg "
+  teenrom[28] = "https://m.media-amazon.com/images/M/MV5BMjAzMTE1NzQxNF5BMl5BanBnXkFtZTgwNjcwODY3MTI@._V1_FMjpg_UX1000_.jpg "
+  teenrom[28] = "https://m.media-amazon.com/images/M/MV5BZThjMmQ5YjktMTUyMC00MjljLWJmMTAtOWIzNDIzY2VhNzQ0XkEyXkFqcGdeQXVyMTAyNjg4NjE0._V1_.jpg "
+  teenrom[29] = "https://upload.wikimedia.org/wikipedia/en/1/12/LastSongposterMarch31.png "
+  teenrom[30] = "https://m.media-amazon.com/images/M/MV5BZDlkNjc2NzQtNGI5Ny00ZjNmLWJjYzktMTk0MDUyZmVkMWRhXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg "
+ 
+ 
+ 
+   //function getRandom ()
+  let number = Math.floor(Math.random() *teenrom.length);
+
+  //let fLen = fruits.length;
+  
+  //let text = "<ul>";
+  //for (let i = 0; i < fLen; i++) {
+  //  text += "<li>" + fruits[i] + "</li>";
+  
+  //text += "</ul>";
+  //return document.getElementById("demo").innerHTML =fruits[number]+'';
+  //}
+  //button.addEventListener("click") => document.getElementById("demo").innerHTML=(fruits[number])
+  document.getElementById("demo").innerHTML= '<img src="'+ (teenrom[number])+'"/>' ;
+  }
+  buttonn.addEventListener("click", setNg);
+   setNg();
+
+//incorperated a lot of https://codepen.io/jsd041313/pen/RQEOWm and https://css-tricks.com/snippets/javascript/random-hex-color/
+//into my code. I also used w3schools to practice since I was getting stuck a lot with getting it to work with pictures
+   
+ 
+</script>    
+</body>
+</html>

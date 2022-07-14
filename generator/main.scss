@@ -1,0 +1,168 @@
+
+header  {
+  margin-top: -20px;
+ //margin-left: -40px;
+ //margin-right: -10px;
+ 
+}
+body {
+  background-color: white;
+  margin: 0;
+  padding: 1rem;
+  display: grid;
+  place-items: center;
+  
+}
+#home  {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-right: -40px;
+ 
+}
+#home a {
+  color: white;
+  text-decoration: none;
+}
+#home a :hover  {
+  color: darkblue;
+}
+
+h1  {
+  color: white;
+  border-radius: 20px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 16px;
+  padding-bottom: 20px;
+  font-size: 22px;
+padding-right: 830px;
+padding-left: 40px;
+  background-color: cornflowerblue;
+  font-weight: lighter;
+}
+h2 {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: lighter;
+   padding: 1rem 2rem;
+  text-align: center;
+}
+p {
+  text-align: center;
+  font-weight: bold;
+}
+
+img  {
+  margin-left: 30px;
+  width: 350px;
+  border: thick solid ;
+}
+
+button  {
+  background-color: white;
+  border-radius: 16px;
+  padding: 20px;
+  margin-left: 120px;
+}
+button a {
+  color: black;
+}
+#button1  {
+  margin-top: 60px;
+  padding-left: 65px;
+padding-right: 65px;
+}
+#button2  {
+margin-top: 50px;
+padding-left: 65px;
+padding-right: 65px;
+  
+}
+#teenrom2  {
+  margin-top: 60px;
+  padding-left: 65px;
+padding-right: 65px;
+  margin-left: 90px;
+}
+#lgbt1  {
+  margin-top: 50px;
+  padding-left: 65px;
+  padding-right: 65px;
+  margin-left: 90px;
+}
+#horror1  {
+  margin-top: 50px;
+  padding-left: 65px;
+padding-right: 65px;
+  margin-left: 90px;
+}
+#com1  {
+  margin-top: 50px;
+  padding-left: 65px;
+  padding-right: 65px;
+  margin-left: 90px;
+}
+#anime1  {
+  margin-top: 50px;
+  padding-left: 65px;
+  padding-right: 65px;
+  margin-left: 90px;
+}
+#fam1  {
+  margin-top: 50px;
+  padding-left: 65px;
+  padding-right: 65px;
+  margin-left: 90px;
+}
+#teenrom3  {
+  margin-top: 50px;
+  padding-left: 65px;
+  padding-right: 65px;
+  margin-left: 90px;
+}
+#lgbt2  {
+  margin-top: 50px;
+  padding-left: 65px;
+  padding-right: 65px;
+  margin-left: 90px;
+}
+#horror2  {
+  margin-top: 50px;
+  padding-left: 65px;
+  padding-right: 65px;
+  margin-left: 90px;
+}
+#com2 {
+  margin-top: 50px;
+  padding-left: 65px;
+  padding-right: 65px;
+  margin-left: 90px;
+}
+#anime2 {
+  margin-top: 50px;
+  padding-left: 65px;
+  padding-right: 65px;
+  margin-left: 90px;
+}
+#kdram1 {
+  margin-top: 50px;
+  padding-left: 65px;
+  padding-right: 65px;
+  margin-left: 90px;
+}
+#cartoon1 {
+  margin-top: 50px;
+  padding-left: 65px;
+  padding-right: 65px;
+  margin-left: 90px;
+}
+
+button a {
+  text-decoration: none;
+}
+button a :hover {
+  background-color: darksalmon;
+}
+button a :active  {
+  color: darksalmon;
+}
+footer  {
+  margin-top: 180px;
+}

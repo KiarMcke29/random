@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header id="top"> 
+        <h1>
+    What should I watch generator?
+    <span id="home"><a href="movieorshow.html"> Home</a></span>
+    </h1>
+    </header>
+    <main>
+        <h2>Which Horror show should I watch?</h2>
+       <p>Press the button bollow</p>
+        <button onclick="blockImage()" id="buttonn">Find out!</button>
+        <p id="demo" ></p>
+         
+     
+</main>  
+<footer>
+    <h1>
+    ©2022 Copyright<br>
+     What should I watch
+     
+     </h1>
+</footer>
+<script>
+   const setHo = () => {
+  const horror=[];
+  horror[1] = "https://m.media-amazon.com/images/M/MV5BZjI1MTM3MWQtOWMyZi00NTg1LWFkN2MtZmYzM2RmODc1NjZmXkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_FMjpg_UX1000_.jpg "
+  horror[2] = "https://m.media-amazon.com/images/M/MV5BYzZjOTg3MWQtMjE0NC00ZGJhLTg3NzAtNWRlZmY2Y2QwYTYyXkEyXkFqcGdeQXVyMTEzMTI1Mjk3._V1_.jpg "
+  horror[3] = "https://m.media-amazon.com/images/M/MV5BNzNlZGJmNGItNzE0Ny00Yzc5LTk0NDQtODRkNWYwMTE2MDVlXkEyXkFqcGdeQXVyMTI3MjgxNjg0._V1_.jpg "
+  horror[4] = "https://static1.colliderimages.com/wordpress/wp-content/uploads/2022/02/all-of-us-are-dead.jpg?q=50&fit=contain&w=943&h=472&dpr=1.5 "
+  horror[5] = "https://m.media-amazon.com/images/M/MV5BNWNkMjQ0OTgtZmMyOS00NTEyLTk0OWQtZGY4Yjc1NDAwN2RjXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg "
+  horror[6] = "https://m.media-amazon.com/images/M/MV5BYmNkMjU0ZTAtMGI3Ni00ZDg0LWEwNTQtMDExMWNmYjgzZmI4XkEyXkFqcGdeQXVyNjEwNTM2Mzc@._V1_.jpg "
+  horror[7] = "https://m.media-amazon.com/images/M/MV5BNjAxNmEzMGEtODBmOS00MGFjLTlkMzgtMDc3NWM5NTc4ZDBhXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg "
+  horror[8] = "https://m.media-amazon.com/images/M/MV5BZjJmMGE5OTktMTkzYy00YmUwLWE5ZTItY2M5ZGNiNWMyYWNlXkEyXkFqcGdeQXVyNjEwNTM2Mzc@._V1_.jpg "
+  horror[9] = "https://m.media-amazon.com/images/M/MV5BMjExMTMxNjMwNl5BMl5BanBnXkFtZTgwNDA2OTYzNjM@._V1_.jpg "
+  horror[10] = "https://upload.wikimedia.org/wikipedia/commons/8/81/Ecran_Titre_d%27American_Horror_Story.png "
+  horror[11] = "https://m.media-amazon.com/images/M/MV5BZjIyMzkzOTYtYWI5Ni00MjIzLTkzMjMtMjViMmU3YmU2YjZjXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg "
+  horror[12] = "https://m.media-amazon.com/images/M/MV5BYWQ0ZmE0ZjEtZDZjOC00ODQ4LTk1MGQtNTk3ZDdlY2RiODg1XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg "
+  horror[13] = "https://m.media-amazon.com/images/M/MV5BOWZhOWM2ODUtNmIxZS00YWZkLWE1MzItNjMxOWExY2QxOGQ4XkEyXkFqcGdeQXVyMTA1OTAyOTI@._V1_.jpg "
+  horror[14] = "https://flxt.tmsimg.com/assets/p16765023_b_v13_ac.jpg "
+  horror[15] = "https://m.media-amazon.com/images/I/91aCWmurY5L._SL1500_.jpg "
+  horror[16] = "https://flxt.tmsimg.com/assets/p19174483_b_v8_aa.jpg "
+  horror[17] = "https://upload.wikimedia.org/wikipedia/en/thumb/c/cb/Archive_81_poster.jpg/250px-Archive_81_poster.jpg "
+  horror[18] = "https://m.media-amazon.com/images/M/MV5BMmViMGI3NDYtYzIzNi00OTVlLWI1YjMtNDJiNmVmMzE3NjUxXkEyXkFqcGdeQXVyNjk1Njg5NTA@._V1_.jpg "
+  horror[19] = "https://upload.wikimedia.org/wikipedia/en/thumb/c/c6/The_Strain_promotional_poster.jpg/200px-The_Strain_promotional_poster.jpg "
+  horror[20] = "https://m.media-amazon.com/images/M/MV5BOTM1OWJlOGQtMjExMC00NGZiLWFjODItOWFjZjZhZWQ5MmUwXkEyXkFqcGdeQXVyOTU0MzQ0MA@@._V1_.jpg "
+  horror[22] = "https://m.media-amazon.com/images/M/MV5BMTNiMDBmZWQtZDI4Ni00ZGViLWJlOWMtNTdkODNlMTFkZjc2XkEyXkFqcGdeQXVyOTA3MTMyOTk@._V1_FMjpg_UX1000_.jpg "
+  horror[23] = "https://m.media-amazon.com/images/M/MV5BODVmMDQ4M2YtNDQ1ZS00N2E3LWEzMjQtNzYxYTlkM2U4MGFmXkEyXkFqcGdeQXVyNjEwNTM2Mzc@._V1_.jpg "
+  horror[23] = "http://pm1.narvii.com/6635/06f82b0487e3bf89734eb42c8dabf4596bb89eb9_00.jpg "
+  horror[24] = "https://flxt.tmsimg.com/assets/p9826581_b_v10_ae.jpg "
+  horror[25] = "https://m.media-amazon.com/images/I/512b6lAxUwL._SY445_.jpg "
+  horror[26] = "https://m.media-amazon.com/images/M/MV5BMzg3NjcyNTI5NF5BMl5BanBnXkFtZTgwNDAyMjU4MzE@._V1_.jpg "
+  horror[27] = "https://flxt.tmsimg.com/assets/p10982694_b_v13_aj.jpg "
+  horror[28] = "https://static.tvtropes.org/pmwiki/pub/images/scream_s3.jpg "
+  horror[29] = "https://m.media-amazon.com/images/M/MV5BNWU4YTQ2ZWEtNDhmZS00NDYzLTlkNmUtMmFjMzA1MjRlMmU4XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg "
+  horror[30] = "https://m.media-amazon.com/images/M/MV5BMTYyMjQyNTE5MF5BMl5BanBnXkFtZTgwMjEyMjE2NDM@._V1_.jpg "
+  horror[31] = "https://m.media-amazon.com/images/M/MV5BMjQwMzQ5MTI3NV5BMl5BanBnXkFtZTgwMjc4NzU4MTE@._V1_.jpg "
+  horror[32] = "https://flxt.tmsimg.com/assets/p8422906_b_v9_aa.jpg "
+  horror[33] = "https://m.media-amazon.com/images/M/MV5BNTkxYWM3OTItYjE4Ny00Nzk4LWE5YjktOThlZWY5OGMzMzMxXkEyXkFqcGdeQXVyNTA3MTU2MjE@._V1_FMjpg_UX1000_.jpg "
+
+  const button= document.querySelector("button");
+ 
+ 
+   //function getRandom ()
+  let number = Math.floor(Math.random() *horror.length);
+
+  //let fLen = fruits.length;
+  
+  //let text = "<ul>";
+  //for (let i = 0; i < fLen; i++) {
+  //  text += "<li>" + fruits[i] + "</li>";
+  
+  //text += "</ul>";
+  //return document.getElementById("demo").innerHTML =fruits[number]+'';
+  //}
+  //button.addEventListener("click") => document.getElementById("demo").innerHTML=(fruits[number])
+  document.getElementById("demo").innerHTML= '<img src="'+ (horror[number])+'"/>' ;
+  }
+  buttonn.addEventListener("click", setHo);
+  setHo();
+
+//incorperated a lot of https://codepen.io/jsd041313/pen/RQEOWm and https://css-tricks.com/snippets/javascript/random-hex-color/
+//into my code. I also used w3schools to practice since I was getting stuck a lot with getting it to work with pictures
+ 
+ 
+</script>    
+</body>
+</html>
